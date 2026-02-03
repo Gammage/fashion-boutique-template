@@ -1,0 +1,124 @@
+@use 'variables' as *;
+@use 'components' as *;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $color-background;
+
+  h2 {
+    padding: $spacing-sm;
+    margin: 0;
+  }
+
+}
+
+// HEADER BAR //
+
+.header-bar {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+  flex-direction: column;
+  //background: $color-background ;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background: $color-background;
+
+    .logo {
+      h1 {
+        font-size: $font-size-lg;
+      }
+    }
+  }
+
+  .header-break {
+    height: 5px;
+
+    span {
+      display: block;
+      height: 5px;
+      width: 100%;
+      background: $color-secondary;
+    }
+  }
+
+}
+
+.menu {
+  display: none;
+}
+
+// MAIN //
+
+main {
+  padding-top: 65px;
+  background: $color-background;
+  //margin-top: 65px;
+
+  .hero {
+    height: calc(100vh - #{60px});
+    //height: 600px; // or whatever you want
+    background-image: url('../img/image_3.webp');
+    background-size: cover; // fills the container
+    background-position: center; // centers the image
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    //background: $color-secondary;
+    justify-content: flex-end;
+    align-items: center;
+    color: white; // for text/buttons on top
+    text-align: center;
+
+    .hero-content {
+      display: flex;
+      width: 100%;
+      background: $color-secondary;
+
+      h2 {
+        padding: $spacing-sm;
+        font-size: $font-size-md;
+        margin: 0;
+        text-align: left;
+        color: $color-background;
+      }
+
+      a {
+        padding: $spacing-sm;
+        color: $color-background;
+      }
+    }
+  }
+
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+
+
+  .product-grid {
+    .product {
+      display: flex;
+      width: 50%;
+      padding: $spacing-sm;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
