@@ -25,7 +25,7 @@
   .main-nav {
     padding: $spacing-sm;
 
-    ul {
+    .menu-list {
       padding: 0;
       margin: 0;
       list-style: none;
@@ -38,7 +38,7 @@
           padding: $spacing-sm 20px;
           text-decoration: none;
           color: $color-secondary;
-          border-bottom: 3px solid $color-secondary;
+          border-bottom: $line-space solid $color-secondary;
           align-items: center;
         }
 
@@ -52,16 +52,38 @@
   }
 
   .menu-footer {
+    display: flex;
     background: $color-secondary;
+    flex-direction: column;
+    width: 100%;
 
     p {
-      padding: $spacing-sm;
       color: $color-background;
+      padding: $spacing-sm;
 
       a {
         color: white;
       }
     }
+
+    ul {
+      padding: $spacing-sm;
+      list-style: none;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-evenly;
+
+      a {
+        display: block;
+        color: white;
+        padding: 0;
+        height: $svg-size;
+        width: $svg-size;
+
+      }
+
+    }
+
   }
 
   .burger {

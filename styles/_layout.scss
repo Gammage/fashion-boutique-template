@@ -7,12 +7,23 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: $color-background;
+  color: $color-secondary;
+
+  a {
+    color: $color-secondary;
+  }
 
   h2 {
     padding: $spacing-sm;
     margin: 0;
   }
 
+  svg {
+    width: $svg-size;
+    height: $svg-size;
+    fill: $color-background;
+
+  }
 }
 
 // HEADER BAR //
@@ -26,29 +37,52 @@ body {
   height: auto;
   z-index: 1000;
   flex-direction: column;
-  //background: $color-background ;
+  background: $color-background ;
 
   .header-content {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 60px;
     background: $color-background;
 
-    .logo {
-      h1 {
-        font-size: $font-size-lg;
+    .desktop-header-container {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        h1 {
+          font-size: $font-size-lg;
+        }
+      }
+
+      .header-socials {
+        display: none //tablet or above only
+
       }
     }
+
+    .main-nav {
+      .mobile-nav {
+        display: flex;
+
+        a {
+          margin-right: 20px;
+        }
+      }
+    }
+
   }
 
   .header-break {
-    height: 5px;
+    height: $line-space;
 
     span {
       display: block;
-      height: 5px;
+      height: $line-space;
       width: 100%;
       background: $color-secondary;
     }
@@ -73,12 +107,13 @@ body {
 // MAIN //
 
 main {
-  padding-top: 65px;
+  // this removes the gap of the header nav
+  padding-top: 62px;
   background: $color-background;
   //margin-top: 65px;
 
   .hero {
-    height: calc(100vh - #{60px});
+    height: calc(100vh - #{62px});
     //height: 600px; // or whatever you want
     background-image: url('../img/image_4.jpg');
     background-size: cover; // fills the container
@@ -132,8 +167,8 @@ main {
       img {
         display: block;
         width: 100%;
-        object-fit: cover;
-        height: 250px;
+        //object-fit: cover;
+        height: auto
       }
 
       h3 {
@@ -146,5 +181,25 @@ main {
 
 // FOOTER //
 footer {
+  background: $color-secondary;
+  color: $color-background;
   padding: $spacing-sm;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: $spacing-sm 0px;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    display: block;
+    color: white;
+    padding: 0;
+    width: $svg-size;
+    height: $svg-size;
+  }
 }

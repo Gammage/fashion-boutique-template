@@ -15,6 +15,7 @@ $color-error: #DC3545;
 // Font families
 $font-sans: 'Inter', system-ui, sans-serif;
 $font-serif: 'Merriweather', serif;
+$svg-size: 32px;
 
 // Font sizes (WCAG-friendly, responsive)
 $font-size-xs: clamp(0.875rem, 1vw, 1rem); // 14-16px
@@ -44,3 +45,6 @@ $bp-sm: 480px;
 $bp-md: 768px;
 $bp-lg: 1024px;
 $bp-xl: 1280px;
+
+// misc
+$line-space: 2px;
