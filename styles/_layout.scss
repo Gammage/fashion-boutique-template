@@ -57,7 +57,17 @@ body {
 }
 
 .menu {
-  display: none;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 65px);
+  transform: translateX(100%); // move off-screen
+  opacity: 0; // invisible
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 1002;
+  background: $color-background;
+
 }
 
 // MAIN //
@@ -70,7 +80,7 @@ main {
   .hero {
     height: calc(100vh - #{60px});
     //height: 600px; // or whatever you want
-    background-image: url('../img/image_3.webp');
+    background-image: url('../img/image_4.jpg');
     background-size: cover; // fills the container
     background-position: center; // centers the image
     background-repeat: no-repeat;
@@ -101,7 +111,6 @@ main {
       }
     }
   }
-
 }
 
 .products {
@@ -110,15 +119,32 @@ main {
 
 
   .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+
     .product {
-      display: flex;
       width: 50%;
       padding: $spacing-sm;
+      box-sizing: border-box;
+      object-fit: cover;
+
 
       img {
         display: block;
         width: 100%;
+        object-fit: cover;
+        height: 250px;
+      }
+
+      h3 {
+        padding: $spacing-xs;
+        text-align: center;
       }
     }
   }
+}
+
+// FOOTER //
+footer {
+  padding: $spacing-sm;
 }
