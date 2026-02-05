@@ -163,10 +163,10 @@ body svg {
 
 .menu {
   position: fixed;
-  top: 65px;
+  top: 62px;
   left: 0;
-  width: 100%;
-  height: calc(100% - 65px);
+  width: 50%;
+  height: calc(100% - 62px);
   transform: translateX(100%);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
@@ -192,18 +192,21 @@ main .hero {
   text-align: center;
 }
 main .hero .hero-content {
-  display: flex;
   width: 100%;
   background: #2B2B2B;
 }
-main .hero .hero-content h2 {
+main .hero .hero-content .desktop-size {
+  display: flex;
+  justify-content: space-around;
+}
+main .hero .hero-content .desktop-size h2 {
   padding: 1rem;
   font-size: clamp(1.125rem, 1.5vw, 1.25rem);
   margin: 0;
   text-align: left;
   color: #EEDECE;
 }
-main .hero .hero-content a {
+main .hero .hero-content .desktop-size a {
   padding: 1rem;
   color: #EEDECE;
 }
@@ -262,6 +265,7 @@ footer a {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    padding-top: 1rem;
   }
   .header-bar .header-content .desktop-header-container .header-socials {
     display: flex;
@@ -269,9 +273,8 @@ footer a {
     grid-column: 3;
     align-items: center;
   }
-  .header-bar .header-content .desktop-header-container .header-socials li {
-    list-style: none;
-    margin-left: 20px;
+  .header-bar .header-content .desktop-header-container .header-socials .social-number {
+    padding-right: 20px;
   }
   .header-bar .header-content .desktop-header-container .header-socials .social-button {
     display: block;
@@ -283,6 +286,7 @@ footer a {
   }
   .header-bar .header-content .main-nav {
     width: 100%;
+    padding-top: 1rem;
   }
   .header-bar .header-content .main-nav .menu {
     position: static;
@@ -306,6 +310,9 @@ footer a {
   .header-bar .header-content .main-nav .menu .menu-list li {
     list-style: none;
   }
+  .header-bar .header-content .main-nav .menu .menu-list li .icon-link.active {
+    border-bottom: 2px solid #2B2B2B;
+  }
   .header-bar .header-content .main-nav .menu .menu-list li a {
     text-decoration: none;
   }
@@ -314,6 +321,34 @@ footer a {
   }
   main .hero {
     background-position: top center;
+  }
+}
+@media (min-width: 1024px) {
+  .header-bar {
+    align-items: center;
+  }
+  .header-bar .header-content {
+    width: 1024px;
+  }
+  main .hero .hero-content {
+    display: flex;
+    justify-content: center;
+  }
+  main .hero .hero-content .desktop-size {
+    width: 1024px;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .products {
+    width: 100%;
+    align-items: center;
+  }
+  main .products h2 {
+    width: 1024px;
+    text-align: center;
+  }
+  main .products .product-grid {
+    width: 1024px;
   }
 }
 

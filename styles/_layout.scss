@@ -92,10 +92,10 @@ body {
 
 .menu {
   position: fixed;
-  top: 65px;
+  top: 62px;
   left: 0;
-  width: 100%;
-  height: calc(100% - 65px);
+  width: 50%;
+  height: calc(100% - 62px);
   transform: translateX(100%); // move off-screen
   opacity: 0; // invisible
   transition: transform 0.4s ease, opacity 0.4s ease;
@@ -128,21 +128,27 @@ main {
     text-align: center;
 
     .hero-content {
-      display: flex;
+      //display: flex;
       width: 100%;
       background: $color-secondary;
 
-      h2 {
-        padding: $spacing-sm;
-        font-size: $font-size-md;
-        margin: 0;
-        text-align: left;
-        color: $color-background;
-      }
+      .desktop-size {
+        display: flex;
+        justify-content: space-around;
 
-      a {
-        padding: $spacing-sm;
-        color: $color-background;
+        h2 {
+          padding: $spacing-sm;
+          font-size: $font-size-md;
+          margin: 0;
+          text-align: left;
+          color: $color-background;
+        }
+
+        a {
+          padding: $spacing-sm;
+          color: $color-background;
+        }
+
       }
     }
   }

@@ -14,6 +14,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr auto 1fr;
+        padding-top: $spacing-sm;
 
         .header-socials {
           display: flex;
@@ -21,9 +22,8 @@
           grid-column: 3;
           align-items: center;
 
-          li {
-            list-style: none;
-            margin-left: 20px;
+          .social-number {
+            padding-right: 20px;
           }
 
           .social-button {
@@ -40,6 +40,7 @@
 
       .main-nav {
         width: 100%;
+        padding-top: $spacing-sm;
 
         .menu {
           position: static; // place it naturally in the header
@@ -63,6 +64,10 @@
 
             li {
               list-style: none;
+
+              .icon-link.active {
+                border-bottom: $line-space solid $color-secondary;
+              }
 
               a {
                 text-decoration: none;
@@ -89,4 +94,48 @@
   }
 }
 
-//@media (min-width:$bp-lg) {}
+//DESKTOP //
+@media (min-width:$bp-lg) {
+  .header-bar {
+    align-items: center;
+
+    .header-content {
+      width: $bp-lg;
+    }
+
+  }
+
+  main {
+
+    .hero {
+      .hero-content {
+        display: flex;
+        justify-content: center;
+
+        .desktop-size {
+          width: $bp-lg;
+          display: flex;
+          justify-content: space-between;
+        }
+
+      }
+
+    }
+
+    .products {
+      width: 100%;
+      align-items: center;
+
+      h2 {
+        width: $bp-lg;
+        text-align: center;
+      }
+
+      .product-grid {
+        width: $bp-lg;
+      }
+    }
+
+  }
+
+}
